@@ -124,9 +124,6 @@ def get_words(wsi_dir, words_per_patch, patch_size):
         dict: A dictionary with WSI names as keys and lists of word patches as values.
 
     Example:
-        wsi_directory = "WSI_data"
-        words_per_patch = 5
-        patch_size = 224
         word_patches_dict = get_words(wsi_directory, words_per_patch, patch_size)
     """
     slide_dictionary = {}
@@ -241,8 +238,8 @@ def get_histograms(slide_dictionary, visual_dictionary):
 
 if __name__ == "__main__":
     start_time = time.time()
-    model = 'VAE_32_hdim'
-    number_words_per_slide = 4000
+    model = 'VAE_16_hdim'
+    number_words_per_slide = 1000
     # kmean cluster size
     cluster_size = 2048
     patch_size = 16
@@ -263,7 +260,7 @@ if __name__ == "__main__":
     #csv_path = '/mayo_atlas/home/m296984/MAIN_CHAIN_CRC_RESULTS/all_CRC_filtered_last_wsi_each_patient.csv'
     
     # Where to save your Top1, Top3, and Top5
-    save_data_path = f'/mayo_atlas/home/m296984/VAE_CHAIN/BREAST/results_abstract_2969num2/{cluster_size}_clusters/{model}_{model_name}_{number_words_per_slide}'
+    save_data_path = f'/mayo_atlas/home/m296984/VAE_CHAIN/BREAST/results_abstract_DEL/{cluster_size}_clusters/{model}_{model_name}_{number_words_per_slide}'
     os.makedirs(save_data_path, exist_ok=True)
     
     # Running the entire dictionary process

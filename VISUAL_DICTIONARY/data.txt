@@ -1,0 +1,289 @@
+Benchmark Data: All at 16x16 patches, 2000 words per slide, KMeans Clustering: 1024, 8 hidden dimension
+
+Liver:
+    - Getting training patches (~1 million): 1795.09 seconds
+    - Training the model (VAE_16x16_8_hdim/1 GPU): 377.80 seconds
+    - Making the dictionary: 5563.35 seconds
+    - Appling leave-one-out and getting Top1, Top3, Top5: 3.79 seconds
+
+Train Epoch: 15 [0/936016 (0%)] MSE: 0.000149   KL: 0.000031    LR: 0.0000006782231
+Train Epoch: 15 [512000/936016 (55%)]   MSE: 0.000151   KL: 0.000030    LR: 0.0000006782231
+====> Epoch: 15 Average loss: 0.0002
+
+Test Slides not processed (due to not finding a 1024x1024 patch with .7 tissue percentage):
+Error processing /mayo_atlas/home/m296984/MAIN_CHAIN_LIVER_RESULTS/test_liver_data/HE51.svs: float division by zero
+Error processing /mayo_atlas/home/m296984/MAIN_CHAIN_LIVER_RESULTS/test_liver_data/HE109.svs: float division by zero
+
+Top N: 1
+
+Confusion Matrix:
+[[ 99  46   4]
+ [ 37 117   4]
+ [  5   6   6]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+         ash     0.7021    0.6644    0.6828       149
+        nash     0.6923    0.7405    0.7156       158
+      normal     0.4286    0.3529    0.3871        17
+
+    accuracy                         0.6852       324
+   macro avg     0.6077    0.5860    0.5952       324
+weighted avg     0.6830    0.6852    0.6833       324
+
+
+
+Top N: 3
+
+Confusion Matrix:
+[[101  46   2]
+ [ 29 125   4]
+ [  6   5   6]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+         ash     0.7426    0.6779    0.7088       149
+        nash     0.7102    0.7911    0.7485       158
+      normal     0.5000    0.3529    0.4138        17
+
+    accuracy                         0.7160       324
+   macro avg     0.6510    0.6073    0.6237       324
+weighted avg     0.7141    0.7160    0.7127       324
+
+
+
+Top N: 5
+
+Confusion Matrix:
+[[107  39   3]
+ [ 26 129   3]
+ [  9   7   1]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+         ash     0.7535    0.7181    0.7354       149
+        nash     0.7371    0.8165    0.7748       158
+      normal     0.1429    0.0588    0.0833        17
+
+    accuracy                         0.7315       324
+   macro avg     0.5445    0.5311    0.5312       324
+weighted avg     0.7135    0.7315    0.7204       324
+
+
+
+
+
+
+Skin:
+    - Getting training patches (~1 million): 1873.75 seconds
+    - Training the model (VAE_16x16_8_hdim/1 GPU): 385.73 seconds
+    - Making the dictionary: 31387.72 seconds
+    - Appling leave-one-out and getting Top1, Top3, Top5: 15.92 seconds
+
+Train Epoch: 15 [0/936016 (0%)] MSE: 0.000140   KL: 0.000029    LR: 0.0000006782231
+Train Epoch: 15 [512000/936016 (55%)]   MSE: 0.000147   KL: 0.000028    LR: 0.0000006782231
+====> Epoch: 15 Average loss: 0.0001
+
+Test Slides not processed (due to not finding a 1024x1024 patch with .7 tissue percentage):
+
+Top N: 1
+
+Confusion Matrix:
+[[ 22   2  15  62]
+ [  1 104   1   1]
+ [ 19   6  29  11]
+ [ 70   2   7 307]]
+
+Classification Report:
+                           precision    recall  f1-score   support
+
+moderately differentiated     0.1964    0.2178    0.2066       101
+                   normal     0.9123    0.9720    0.9412       107
+    poorly differentiated     0.5577    0.4462    0.4957        65
+      well differentiated     0.8058    0.7953    0.8005       386
+
+                 accuracy                         0.7011       659
+                macro avg     0.6180    0.6078    0.6110       659
+             weighted avg     0.7052    0.7011    0.7023       659
+
+
+
+Top N: 3
+
+Confusion Matrix:
+[[ 16   3  11  71]
+ [  0 105   2   0]
+ [  8   6  33  18]
+ [ 42   2   4 338]]
+
+Classification Report:
+                           precision    recall  f1-score   support
+
+moderately differentiated     0.2424    0.1584    0.1916       101
+                   normal     0.9052    0.9813    0.9417       107
+    poorly differentiated     0.6600    0.5077    0.5739        65
+      well differentiated     0.7916    0.8756    0.8315       386
+
+                 accuracy                         0.7466       659
+                macro avg     0.6498    0.6308    0.6347       659
+             weighted avg     0.7129    0.7466    0.7259       659
+
+
+
+Top N: 5
+
+Confusion Matrix:
+[[ 11   3  10  77]
+ [  0 105   2   0]
+ [ 10   6  32  17]
+ [ 24   2   4 356]]
+
+Classification Report:
+                           precision    recall  f1-score   support
+
+moderately differentiated     0.2444    0.1089    0.1507       101
+                   normal     0.9052    0.9813    0.9417       107
+    poorly differentiated     0.6667    0.4923    0.5664        65
+      well differentiated     0.7911    0.9223    0.8517       386
+
+                 accuracy                         0.7648       659
+                macro avg     0.6518    0.6262    0.6276       659
+             weighted avg     0.7136    0.7648    0.7307       659
+
+
+
+
+
+CRC:
+    - Getting training patches (~1 million): 1902.76 seconds
+    - Training the model (VAE_16x16_8_hdim/1 GPU): 1228.90 seconds
+    - Making the dictionary: 1878.95 seconds
+    - Appling leave-one-out and getting Top1, Top3, Top5: 1.45 seconds
+
+Test Slides not processed (due to not finding a 1024x1024 patch with .7 tissue percentage):
+
+Top N: 1
+
+Confusion Matrix:
+[[39  3 19]
+ [ 2 40 21]
+ [15 31 37]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+         CAP     0.6964    0.6393    0.6667        61
+      POP-NR     0.5405    0.6349    0.5839        63
+       POP-R     0.4805    0.4458    0.4625        83
+
+    accuracy                         0.5604       207
+   macro avg     0.5725    0.5733    0.5710       207
+weighted avg     0.5624    0.5604    0.5596       207
+
+
+
+
+Top N: 3
+
+Confusion Matrix:
+[[41  5 15]
+ [ 1 42 20]
+ [16 36 31]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+         CAP     0.7069    0.6721    0.6891        61
+      POP-NR     0.5060    0.6667    0.5753        63
+       POP-R     0.4697    0.3735    0.4161        83
+
+    accuracy                         0.5507       207
+   macro avg     0.5609    0.5708    0.5602       207
+weighted avg     0.5507    0.5507    0.5450       207
+
+
+
+
+Top N: 5
+
+Confusion Matrix:
+[[42  6 13]
+ [ 1 39 23]
+ [14 38 31]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+         CAP     0.7368    0.6885    0.7119        61
+      POP-NR     0.4699    0.6190    0.5342        63
+       POP-R     0.4627    0.3735    0.4133        83
+
+    accuracy                         0.5411       207
+   macro avg     0.5565    0.5604    0.5531       207
+weighted avg     0.5457    0.5411    0.5381       207
+
+
+
+
+
+
+Breast:
+    - Getting training patches (~1 million): 1503.76 seconds
+    - Training the model (VAE_16x16_8_hdim/1 GPU): 1228.90 seconds
+    - Making the dictionary: 969.41 seconds
+    - Appling leave-one-out and getting Top1, Top3, Top5: 0.21 seconds
+
+    Train Epoch: 15 [0/400000 (0%)] MSE: 0.000049   KL: 0.001107    LR: 0.0000006782231
+====> Epoch: 15 Average loss: 0.0002
+
+Test Slides not processed (due to not finding a 1024x1024 patch with .7 tissue percentage):
+Error processing /mayo_atlas/home/m296984/MAIN_CHAIN_BREAST_RESULTS/testing_data/13.svs: float division by zero
+
+Top N: 1
+
+Confusion Matrix:
+[[ 0  0  0  0  1  1  0  0  0  0  0  0  1  0  0  0]
+ [ 0  0  0  0  0  1  0  0  0  0  0  0  0  0  3  0]
+ [ 0  0  7  0  0  1  1  0  0  0  0  0  0  0  1  0]
+ [ 0  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  3  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  1  2  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  2  0  0  0  0  0  1  0  0  0]
+ [ 0  0  0  0  0  0  0  0  1  0  0  0  1  0  0  0]
+ [ 0  0  0  0  0  0  0  0  2  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  4  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  2  1  0  0  1  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  1]
+ [ 0  0  1  0  0  0  0  0  0  0  0  0  0  0  4  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  2  0  0]
+ [ 0  1  0  0  0  0  1  0  0  0  0  0  2  0 17  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  2  0]]
+
+Classification Report:
+                                                                                                               precision    recall  f1-score   support
+
+                                                                                     Adenoid Cystic Carcinoma     0.0000    0.0000    0.0000         3
+                                                                                           Adenomyoepthelioma     0.0000    0.0000    0.0000         4
+                                                                                     Ductal Carcinoma In Situ     0.7000    0.7000    0.7000        10
+Ductal Carcinoma In Situ, Columnar Cell Lesions Including Flat Epithelial Atypia, Atypical Ductal Hyperplasia     1.0000    1.0000    1.0000         3
+                                                                 Intraductal Papilloma, Columnar Cell Lesions     0.7500    1.0000    0.8571         3
+                                                                 Invasive Breast Carcinoma of No Special Type     0.0000    0.0000    0.0000         3
+                                                                                   Invasive lobular carcinoma     0.5000    0.6667    0.5714         3
+                                                     Lobular Carcinoma In Situ + Atypical Lobular Hyperplasia     0.0000    0.0000    0.0000         2
+                              Lobular Carcinoma In Situ, Flat Epithelial Atypia, Atypical Lobular Hyperplasia     0.6667    1.0000    0.8000         2
+                                                                                Malignant Adenomyoepithelioma     1.0000    1.0000    1.0000         4
+                                                                                        Metaplastic Carcinoma     1.0000    0.5000    0.6667         4
+                                                                                      Microglandular Adenosis     0.0000    0.0000    0.0000         2
+                                                                                      Microinvasive carcinoma     0.0000    0.0000    0.0000         5
+                                                                                  Mucinous Cystadenocarcinoma     1.0000    1.0000    1.0000         2
+                                                                                                Normal breast     0.5862    0.8095    0.6800        21
+                                                                        Radial scar complex sclerosing lesion     0.0000    0.0000    0.0000         2
+
+                                                                                                     accuracy                         0.5753        73
+                                                                                                    macro avg     0.4502    0.4798    0.4547        73
+                                                                                                 weighted avg     0.5122    0.5753    0.5320        73
+
+

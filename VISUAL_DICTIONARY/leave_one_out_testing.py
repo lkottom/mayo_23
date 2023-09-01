@@ -78,9 +78,12 @@ def leave_one_out_test(histogram_dict, csv_filepath, top_n):
     # Read the CSV file to get slide names and corresponding labels
     with open(csv_filepath, newline='') as csvfile:
         reader = csv.DictReader(csvfile)
-        # Or replace with whatever is your filename header 
-        slide_labels = {row['\ufefffile_name']: row["label"] for row in reader}
-        #slide_labels = {row['file_name']: row["label"] for row in reader}
+        # Or replace with whatever is your filename header
+         
+        # LIVER AND BREAST CSV
+        #slide_labels = {row['\ufefffile_name']: row["label"] for row in reader}
+        # SKIN AND CRC
+        slide_labels = {row['file_name']: row["label"] for row in reader}
    
 
     # Initialize lists to store true and predicted labels

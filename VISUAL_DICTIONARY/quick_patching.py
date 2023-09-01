@@ -401,7 +401,8 @@ if __name__ == "__main__":
     for file in tqdm.tqdm(os.listdir(wsi_dir), total=len(os.listdir(wsi_dir)), desc="Getting Words: "):
         if file.endswith('.svs'):
             wsi_path = os.path.join(wsi_dir, file)
-            image_list = process_wsi(wsi_path, number_of_words_per_patch=words_per_patch, word_size=patch_size, output_patch_size=1024)
+            image_list = process_wsi(wsi_path, number_of_words_per_patch=words_per_patch, word_size=patch_size, training_set=True, 
+                                     output_patch_size=1024, number_of_patches=20, tissue_percent=0.7)
             if (type(image_list)) != bool:
                 for i, image_data in enumerate(image_list):
                     image = image_data
