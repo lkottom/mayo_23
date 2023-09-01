@@ -1,0 +1,51 @@
+Model Name: VAE_8_hdim_16x16_8_hdim
+Number of Words per Slide: 4000
+Cluster Size: 2048
+Patch Size: 16
+Top N: 5
+
+Confusion Matrix:
+[[ 0  0  0  0  1  0  0  1  0  0  0  0  1  0  0  0]
+ [ 0  0  0  0  0  1  1  0  0  0  0  0  0  0  2  0]
+ [ 0  0  4  0  1  1  1  0  0  0  2  0  0  1  0  0]
+ [ 0  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  1  0  2  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  2  1  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  2  0  0  0  0  0  0  0  1  0]
+ [ 0  0  0  1  0  0  0  0  0  0  0  0  0  0  1  0]
+ [ 0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  4  0  0  0  0  0  0]
+ [ 0  0  1  0  0  1  0  0  0  0  0  0  0  0  2  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  1]
+ [ 0  0  1  0  0  0  0  0  0  0  0  0  0  0  4  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  2  0]
+ [ 0  1  0  0  0  0  1  0  0  0  0  0  0  0 19  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  2  0]]
+
+Classification Report:
+                                                                                                               precision    recall  f1-score   support
+
+                                                                                     Adenoid Cystic Carcinoma     0.0000    0.0000    0.0000         3
+                                                                                           Adenomyoepthelioma     0.0000    0.0000    0.0000         4
+                                                                                     Ductal Carcinoma In Situ     0.4444    0.4000    0.4211        10
+Ductal Carcinoma In Situ, Columnar Cell Lesions Including Flat Epithelial Atypia, Atypical Ductal Hyperplasia     0.4286    1.0000    0.6000         3
+                                                                 Intraductal Papilloma, Columnar Cell Lesions     0.5000    0.6667    0.5714         3
+                                                                 Invasive Breast Carcinoma of No Special Type     0.0000    0.0000    0.0000         3
+                                                                                   Invasive lobular carcinoma     0.4000    0.6667    0.5000         3
+                                                     Lobular Carcinoma In Situ + Atypical Lobular Hyperplasia     0.0000    0.0000    0.0000         2
+                              Lobular Carcinoma In Situ, Flat Epithelial Atypia, Atypical Lobular Hyperplasia     0.0000    0.0000    0.0000         2
+                                                                                Malignant Adenomyoepithelioma     1.0000    1.0000    1.0000         4
+                                                                                        Metaplastic Carcinoma     0.0000    0.0000    0.0000         4
+                                                                                      Microglandular Adenosis     0.0000    0.0000    0.0000         2
+                                                                                      Microinvasive carcinoma     0.0000    0.0000    0.0000         5
+                                                                                  Mucinous Cystadenocarcinoma     0.0000    0.0000    0.0000         2
+                                                                                                Normal breast     0.5588    0.9048    0.6909        21
+                                                                        Radial scar complex sclerosing lesion     0.0000    0.0000    0.0000         2
+
+                                                                                                     accuracy                         0.4658        73
+                                                                                                    macro avg     0.2082    0.2899    0.2365        73
+                                                                                                 weighted avg     0.3310    0.4658    0.3799        73
+
+
+
+

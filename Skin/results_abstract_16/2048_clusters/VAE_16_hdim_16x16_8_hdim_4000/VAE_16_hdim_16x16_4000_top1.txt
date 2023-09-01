@@ -1,0 +1,27 @@
+Model Name: VAE_16_hdim_16x16_8_hdim
+Number of Words per Slide: 4000
+Cluster Size: 2048
+Patch Size: 16
+Top N: 1
+
+Confusion Matrix:
+[[ 22   2  15  62]
+ [  1 104   1   1]
+ [ 19   6  29  11]
+ [ 70   2   7 307]]
+
+Classification Report:
+                           precision    recall  f1-score   support
+
+moderately differentiated     0.1964    0.2178    0.2066       101
+                   normal     0.9123    0.9720    0.9412       107
+    poorly differentiated     0.5577    0.4462    0.4957        65
+      well differentiated     0.8058    0.7953    0.8005       386
+
+                 accuracy                         0.7011       659
+                macro avg     0.6180    0.6078    0.6110       659
+             weighted avg     0.7052    0.7011    0.7023       659
+
+
+
+
